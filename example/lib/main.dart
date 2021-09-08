@@ -1,9 +1,15 @@
 import 'package:boxer/boxer.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
-void main() {
+Future<void> main() async {
   /// Example usage of Boxer logger
   Boxer.punch("Test Log Message", label: "DEBUG");
+
+  var response =
+      await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/1"));
+
+  Boxer.punch(response.body);
 
   runApp(MyApp());
 }

@@ -15,6 +15,7 @@ class Boxer {
     label = label ??
         sourcePath.substring(
             sourcePath.indexOf("/") + 1, sourcePath.lastIndexOf(":"));
-    log("\n $dt ${message.toString()} $sourcePath", name: label);
+    log("$dt $sourcePath", name: label);
+    log(message.toString(), name: label);
   }
 }
