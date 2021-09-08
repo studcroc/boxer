@@ -1,7 +1,8 @@
-import 'package:flutter_test/flutter_test.dart';
+import 'package:boxer/boxer.dart';
+import 'package:test/test.dart';
 
 void main() {
-  test('adds one to input values', () {
-    // final calculator = Calculator();
+  test("Boxer's punch method should log as expected", () {
+    Boxer.punch("Test Log Message", label: "TEST");
   });
 }
