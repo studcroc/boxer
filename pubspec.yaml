@@ -1,5 +1,5 @@
 name: boxer
-description: A new Flutter package project.
+description: Utility logging tool for dart & flutter applications to print log messages with useful meta-data.
 version: 0.0.2
 repository: "https://github.com/hvg2416/boxer"
 

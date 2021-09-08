@@ -4,7 +4,10 @@ import 'dart:developer';
 
 import 'package:intl/intl.dart';
 
+/// [Boxer] is the main class which provides APIs for logging
 class Boxer {
+  /// [punch] method accepts a [string] & an optional [label] & logs out the message
+
   static punch(dynamic message, {String? label}) {
     String s = StackTrace.current.toString();
     var list = s.split("\n");
