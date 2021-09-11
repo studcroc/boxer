@@ -13,13 +13,22 @@ Boxer.punch("Boxer has punched! 🥊");
 ## Documentation
 
 ```dart
-Boxer.punch(String message, {String? label})
+Boxer.punch(dynamic message, {String? label})
 ```
 
-### Example
+### Examples
+
+- Logging out a string
 
 ```dart
 Boxer.punch("Punch It!", label: "DEBUG");
+```
+
+- Logging out a list of strings
+
+
+```dart
+Boxer.punch(["Punch It!", "Punch It Again!"], label: "DEBUG");
 ```
 
 ## MIT License
