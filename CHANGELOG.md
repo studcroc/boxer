@@ -13,3 +13,9 @@
 - Resolved few bugs.
 
 - Code improvements.
+
+## 0.0.4
+
+- Added support for list of arguments as log messages.
+
+- Code improvements.
