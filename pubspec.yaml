@@ -1,6 +1,6 @@
 name: boxer
 description: Utility logging tool for dart & flutter applications to print log messages with useful meta-data.
-version: 0.0.4
+version: 0.0.5
 repository: "https://github.com/hvg2416/boxer"
 
 environment:
