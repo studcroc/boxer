@@ -29,7 +29,17 @@ class Boxer {
             sourcePath.indexOf("/") + 1, sourcePath.lastIndexOf(":"));
     log("$dt $sourcePath", name: label);
     for (var item in vargs) {
-      log(item.toString(), name: label);
+      if (item is Exception) {
+        dynamic x = item;
+        log(x.message, name: label);
+        log(x.source, name: label);
+      } else if (item is Error) {
+        dynamic x = item;
+        log(x.toString(), name: label);
+        log(x.stackTrace.toString(), name: label);
+      } else {
+        log(item.toString(), name: label);
+      }
     }
   }
 }

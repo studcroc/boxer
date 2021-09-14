@@ -1,5 +1,6 @@
 import 'package:boxer/boxer.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 Future<void> main() async {
   /// Example usage of Boxer logger with a single argument
@@ -8,10 +9,18 @@ Future<void> main() async {
   /// Example usage of Boxer logger with list of arguments
   Boxer.punch(["Test Log Message 1", "Test Log Message 2"], label: "DEBUG");
 
+  /// Example usage of Boxer logger with runtime error
+  try {
+    List x = [1, 2];
+    print(x[2]);
+  } catch (e) {
+    Boxer.punch(e);
+  }
+
   /// Example usage of Boxer logger with api response
-  // var response =
-  //     await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/"));
-  // Boxer.punch(response.body);
+  var response =
+      await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/"));
+  Boxer.punch(response.body);
 
   runApp(MyApp());
 }
