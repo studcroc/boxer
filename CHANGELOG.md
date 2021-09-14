@@ -19,3 +19,9 @@
 - Added support for list of arguments as log messages.
 
 - Code improvements.
+
+## 0.0.5
+
+- Errors & exceptions are handled elegantly now.
+
+- Code improvements.
