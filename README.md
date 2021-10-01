@@ -31,6 +31,8 @@ Boxer.punch("Punch It!", label: "DEBUG");
 Boxer.punch(["Punch It!", "Punch It Again!"], label: "DEBUG");
 ```
 
+![Screenshot](https://i.ibb.co/vXvR4pR/screenshot.png)
+
 ## MIT License
 
 ```Copyright (c) 2018 Boxer
