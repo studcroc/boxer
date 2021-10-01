@@ -4,6 +4,8 @@ import 'dart:developer';
 
 import 'package:intl/intl.dart';
 
+import 'colors.dart';
+
 /// [Boxer] is the main class which provides APIs for logging
 class Boxer {
   /// [punch] method accepts a [dynamic] [message] & an optional [String] [label] & logs out the message
@@ -38,7 +40,7 @@ class Boxer {
         log(x.toString(), name: label);
         log(x.stackTrace.toString(), name: label);
       } else {
-        log(item.toString(), name: label);
+        log("$white$redbg$item", name: label);
       }
     }
   }
