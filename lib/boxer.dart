@@ -21,26 +21,26 @@ class Boxer {
   static void _printLogs(
       List<dynamic> vargs, String? label, StackTrace current) {
     String s = current.toString();
-    var list = s.split("\n");
-    var sourcePath = list[1].substring(list[1].indexOf("package"));
+    var list = s.split('\n');
+    var sourcePath = list[1].substring(list[1].indexOf('package'));
     DateTime now = DateTime.now();
     final DateFormat formatter = DateFormat('yyyy-MM-dd | hh:mm:ss');
     final String dt = formatter.format(now);
     label = label ??
         sourcePath.substring(
-            sourcePath.indexOf("/") + 1, sourcePath.lastIndexOf(":"));
-    log("$yellow$dt $sourcePath", name: label);
+            sourcePath.indexOf('/') + 1, sourcePath.lastIndexOf(':'));
+    log('$yellow$dt $sourcePath', name: label);
     for (var item in vargs) {
       if (item is Exception) {
         dynamic x = item;
-        log("$white$redbg${x.message}", name: label);
-        log("$white$redbg${x.source}", name: label);
+        log('$white$redbg${x.message}', name: label);
+        log('$white$redbg${x.source}', name: label);
       } else if (item is Error) {
         dynamic x = item;
-        log("$white$redbg${x.toString()}", name: label);
-        log("$white$redbg${x.stackTrace.toString()}", name: label);
+        log('$white$redbg${x.toString()}', name: label);
+        log('$white$redbg${x.stackTrace.toString()}', name: label);
       } else {
-        log("$white$item", name: label);
+        log('$white$item', name: label);
       }
     }
   }
