@@ -25,3 +25,7 @@
 - Errors & exceptions are handled elegantly now.
 
 - Code improvements.
+
+## 0.0.6
+
+- Minor Code improvements.
